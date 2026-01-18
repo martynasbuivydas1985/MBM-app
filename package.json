@@ -1,0 +1,24 @@
+{
+  "name": "mbm-app",
+  "version": "0.1.0",
+  "description": "MB management dashboard",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martynasbuivydas1985/MBM-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martynasbuivydas1985/MBM-app/issues"
+  },
+  "homepage": "https://github.com/martynasbuivydas1985/MBM-app#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
