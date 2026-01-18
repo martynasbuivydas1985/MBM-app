@@ -19,3 +19,11 @@ MB management dashboard for tracking members, plans, and activity.
 ## Project structure
 - `server.js` Express server and static file hosting
 - `public/` Front-end assets (HTML, CSS, JS)
+
+## Android (native)
+The Android project lives in `android/` and loads the dashboard from local assets.
+
+### Build debug APK
+1. Install Android SDK and set `ANDROID_SDK_ROOT`.
+2. From `android/`, run `./gradlew assembleDebug`.
+3. APK output: `android/app/build/outputs/apk/debug/app-debug.apk`.

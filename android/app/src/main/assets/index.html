@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBM App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app__header">
+        <div>
+          <p class="eyebrow">MB management</p>
+          <h1>Member Base Manager</h1>
+          <p class="subtitle">
+            Track members, plans, and activity from a single dashboard.
+          </p>
+        </div>
+        <div class="header__actions">
+          <button id="reset-data" class="button button--ghost" type="button">
+            Reset demo data
+          </button>
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="card">
+          <span>Total members</span>
+          <strong id="stat-total">0</strong>
+          <small id="stat-updated">Updated just now</small>
+        </div>
+        <div class="card">
+          <span>Active</span>
+          <strong id="stat-active">0</strong>
+          <small>Members in good standing</small>
+        </div>
+        <div class="card">
+          <span>Inactive</span>
+          <strong id="stat-inactive">0</strong>
+          <small>Needs follow-up</small>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <h2>Members</h2>
+              <p class="panel__subtitle">Manage the current roster.</p>
+            </div>
+            <div class="filters">
+              <input
+                id="search-input"
+                type="search"
+                placeholder="Search by name"
+                aria-label="Search by name"
+              />
+              <select id="status-filter" aria-label="Filter by status">
+                <option value="all">All statuses</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+              </select>
+            </div>
+          </div>
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Plan</th>
+                  <th>Status</th>
+                  <th>Location</th>
+                  <th>Joined</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="members-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <aside class="panel panel--aside">
+          <h2>Add member</h2>
+          <form id="member-form">
+            <label for="member-name">Full name</label>
+            <input id="member-name" name="member-name" type="text" required />
+
+            <label for="member-plan">Plan</label>
+            <select id="member-plan" name="member-plan">
+              <option value="Standard">Standard</option>
+              <option value="Premium">Premium</option>
+              <option value="Enterprise">Enterprise</option>
+            </select>
+
+            <label for="member-status">Status</label>
+            <select id="member-status" name="member-status">
+              <option value="active">Active</option>
+              <option value="inactive">Inactive</option>
+            </select>
+
+            <label for="member-location">Location</label>
+            <input
+              id="member-location"
+              name="member-location"
+              type="text"
+              placeholder="City, Country"
+            />
+
+            <button class="button" type="submit">Add member</button>
+            <p id="form-message" class="form__message" role="status"></p>
+          </form>
+
+          <div class="aside__note">
+            <h3>Next steps</h3>
+            <ul>
+              <li>Review inactive members weekly.</li>
+              <li>Offer upgrades to active users.</li>
+              <li>Export data monthly for reporting.</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
