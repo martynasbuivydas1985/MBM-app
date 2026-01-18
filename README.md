@@ -1,4 +1,4 @@
-# MBM app
+
 
 Construction field management system for drawings, tasks, RFIs, and reporting
 with offline-first mobile workflows and cloud sync.
